@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+  }
+
+  .difFont {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    background: #101a44 url("./img/getty_1053210080_408760.png") no-repeat;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .calculator-grid {
+    display: grid;
+    justify-content: center;
+    max-height: 100vh;
+    grid-template-columns: repeat(4, 13vh);
+    grid-template-rows: minmax(17vh, auto) repeat(5, 13vh);
+    grid-gap: 0.6vh;
+  }
+  
+  .calculator-grid > button {
+    cursor: pointer;
+    font-size: 4vh;
+    outline: none;
+    background-color: rgba(125, 153, 206, 0.329);
+    backdrop-filter: blur(10px);
+    color: rgb(0, 0, 0);
+    border: none;
+  }
+  
+  .calculator-grid > button:hover {
+    background-color: rgba(27, 96, 187, 0.342);
+    color: white;
+    transition: 1s;
+  }
+  
+  .output {
+    grid-column: 1 / -1;
+    background-color: rgba(10, 13, 37, 0.473);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0.625rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    backdrop-filter: blur(10px);
+  }
+  
+  .output .previous-operand {
+    color: rgba(134, 224, 247, 0.75);
+    font-size: 3vh;
+    word-spacing: -0.3em;
+  }
+  
+  .output .current-operand {
+    color: rgb(193, 239, 250);
+    font-size: 4.2vh;
+    word-spacing: -0.3em;
+  }
+  
+  button[data-sqrt], button[data-all-clear], button[data-delete], button[data-operation], button[data-pow], button[data-negative] {
+    background-color: rgba(193, 255, 250, 0.308);
+  }
